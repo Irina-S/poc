@@ -2,25 +2,7 @@
 <html lang="ru">
 @@include('_head.html')
 <body>
-    <aside class="aside">
-        <div class="logo">
-            <img src="img/logo.png" alt="лого">
-        </div>
-        <ul class="cat-list">
-            <li class="cat-list__item"><a href=""><i class="icon-menu-1"></i>Ортопедическая обувь</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-2"></i>Корсеты и корректоры осанки</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-3"></i>Бандажи</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-4"></i>Трикотаж</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-5"></i>Подушки и матрасы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-6"></i>Ортези на суставы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-7"></i>Стельки и корректоры стопы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-8"></i>Товари после мастэктомии</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-9"></i>Тех. средства реабилитации</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-10"></i>Массажные изделия</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-11"></i>Бинты и тейпы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-12"></i>Средства индивидуальной защиты</a></li>
-        </ul>
-    </aside>
+    @@include('_aside.html')
     <div class="wrapper">
         <div class="inner-wrapper">
             @@include('_header.html')
@@ -200,7 +182,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="btn btn_transparent"><i class="icon-font icon-catalog"></i>Перейти в каталог</div>
+                        <a class="btn btn_transparent" href="catalog.html"><i class="icon-font icon-catalog"></i>Перейти в каталог</a>
                     </div>
                 </div>
             </section>
@@ -281,10 +263,10 @@
             <section class="about-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5 col-lg-6">
                             <img src="img/about-section-img.png" alt="">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-7 col-lg-6">
                             <div class="about-section__content">
                                 <div class="section-title">О магазине</div>
 

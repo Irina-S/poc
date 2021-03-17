@@ -16,33 +16,43 @@
     <!-- <link rel="stylesheet" href="./css/nice-select.css">
     <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css?v=1.0.2">
-    <link rel="stylesheet" href="css/responsive.css?v=1.0.2">
+    <link rel="stylesheet" href="css/style.css?v=1.0.3">
+    <link rel="stylesheet" href="css/responsive.css?v=1.0.3">
 </head>
 
 <body>
     <aside class="aside">
-        <div class="logo">
-            <img src="img/logo.png" alt="лого">
-        </div>
-        <ul class="cat-list">
-            <li class="cat-list__item"><a href=""><i class="icon-menu-1"></i>Ортопедическая обувь</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-2"></i>Корсеты и корректоры осанки</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-3"></i>Бандажи</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-4"></i>Трикотаж</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-5"></i>Подушки и матрасы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-6"></i>Ортези на суставы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-7"></i>Стельки и корректоры стопы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-8"></i>Товари после мастэктомии</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-9"></i>Тех. средства реабилитации</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-10"></i>Массажные изделия</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-11"></i>Бинты и тейпы</a></li>
-            <li class="cat-list__item"><a href=""><i class="icon-menu-12"></i>Средства индивидуальной защиты</a></li>
-        </ul>
-    </aside>
+    <div class="logo">
+        <img src="img/logo.png" alt="лого">
+    </div>
+    <ul class="cat-list">
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-1"></i>Ортопедическая обувь</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-2"></i>Корсеты и корректоры осанки</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-3"></i>Бандажи</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-4"></i>Трикотаж</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-5"></i>Подушки и матрасы</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-6"></i>Ортези на суставы</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-7"></i>Стельки и корректоры стопы</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-8"></i>Товари после мастэктомии</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-9"></i>Тех. средства реабилитации</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-10"></i>Массажные изделия</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-11"></i>Бинты и тейпы</a></li>
+        <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-12"></i>Средства индивидуальной защиты</a></li>
+    </ul>
+</aside>
     <div class="wrapper">
         <div class="inner-wrapper">
             <header class="header">
+    <div class="header-mobile">
+        <div class="logo">
+            <img src="img/logo.png" alt="лого">
+        </div>
+
+        <div class="header-mobile__phone-block">
+            <a href="" class="phone">+7 (914) 357-07-03</a>
+            <div class="shedule">9:00-18:00 — без выходных</div>  
+        </div>
+    </div>
     <div class="header__top">
         <nav class="nav">
             <a href="" class="nav__link">Главная</a>
@@ -72,6 +82,14 @@
         </div>
     </div>
     <div class="header__bottom">
+        <div class="main-nav-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <button class="btn catalog-btn">Каталог</button>
+
         <div class="header__phone-block">
             <a href="" class="phone">+7 (914) 357-07-03</a>
             <div class="shedule">9:00-18:00 — без выходных</div>  
@@ -81,8 +99,11 @@
             <form action="" class="search-form">
                 <input type="text">
                 <button type="submit"><i class="icon-font icon-search"></i>Найти</button>
+                <buttom class="search-form__close-btn"></buttom>
             </form>
         </div>
+
+        <button class="search-open-btn"><i class="icon-font icon-search"></i></button>
 
         <a class="header__cart cart-block">
             <div class="cart__img">
@@ -272,7 +293,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="btn btn_transparent"><i class="icon-font icon-catalog"></i>Перейти в каталог</div>
+                        <a class="btn btn_transparent" href="catalog.html"><i class="icon-font icon-catalog"></i>Перейти в каталог</a>
                     </div>
                 </div>
             </section>
@@ -353,10 +374,10 @@
             <section class="about-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5 col-lg-6">
                             <img src="img/about-section-img.png" alt="">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-7 col-lg-6">
                             <div class="about-section__content">
                                 <div class="section-title">О магазине</div>
 
