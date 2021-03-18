@@ -106,8 +106,7 @@ function css_libs(){
         // 'node_modules/fancybox/dist/css/jquery.fancybox.css',
         'node_modules/bootstrap/dist/css/bootstrap-grid.css',
         'node_modules/slick-carousel/slick/slick.css',        
-        // 'node_modules/jquery-nice-select/css/nice-select.css'
-        // 'node_modules/jquery-nice-select/css/nice-select.css'
+        'node_modules/jquery-nice-select/css/nice-select.css'
         // 'node_modules/animate.css/animate.css'
         // 'node_modules/wow.js/css/libs/animate.css'
     ])
@@ -136,9 +135,9 @@ function js_libs(){
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-        // 'node_modules/sticky-js/dist/sticky.min.js',
+        'node_modules/sticky-js/dist/sticky.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
-        // 'node_modules/jquery-nice-select/js/jquery.nice-select.min.js'
+        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js'
         // 'node_modules/wow.js/dist/wow.js'
       ])
         // .pipe(uglify())

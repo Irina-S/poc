@@ -6,12 +6,110 @@
     <div class="wrapper">
         <div class="inner-wrapper">
             @@include('_header.html')
-             
-            <ul class="breadcrumbs">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Каталог товаров</a></li>
-                <li class="breadcrumbs__item">Ортопедическая обувь</li>
-            </ul>
+
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Каталог товаров</a></li>
+                    <li class="breadcrumbs__item">Ортопедическая обувь</li>
+                </ul>
+
+                <h1 class="page-title">Ортопедическая обувь</h1>
+
+                <form class="filters">
+                    <div class="filter-group">
+                        <input class="filter filter_type1" type="radio" id="filter1" name="filter">
+                        <label for="filter1">
+                            <img src="img/filters/1.png" alt="">
+                            <span>Детская и подростковая</span>
+                            <i class="icon-font icon-tick"></i>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter2" name="filter">
+                        <label for="filter2">
+                            <img src="img/filters/2.png" alt="">
+                            <span>Взрослая</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter3" name="filter">
+                        <label for="filter3">
+                            <img src="img/filters/3.png" alt="">
+                            <span>Терапевтическая обувь</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter4" name="filter">
+                        <label for="filter4">
+                            <img src="img/filters/4.png" alt="">
+                            <span>Стабилизирующая обувь</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter5" name="filter">
+                        <label for="filter5">
+                            <img src="img/filters/5.png" alt="">
+                            <span>Домашняя обувь</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Взрослая обувь:</div>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter11" name="filter1">
+                        <label for="filter11">
+                            <span>Варусная</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter12" name="filter1">
+                        <label for="filter12">
+                            <span>Женская обувь</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter13" name="filter1">
+                        <label for="filter13">
+                            <span>Мужская обувь</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter14" name="filter1">
+                        <label for="filter14">
+                            <span>Мужская обувь (скрытая)</span>
+                        </label>
+
+                        <div class="filter-select">
+                            <label for="sort-select">Сортировать по:</label>
+                            <select name="" id="sort-select" class="sort-select">
+                                <option value="">новизне</option>
+                                <option value="">популярности</option>
+                                <option value="">цене (от высокой)</option>
+                                <option value="">цене (от низкой)</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="catalog">
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                    @@include('_product.html')
+
+                </div>
+
+                <a class="btn btn_transparent" href=""><i class="icon-font icon-catalog"></i>Показать еще</a>
+            </div>
         </div>
 
          @@include('_footer.html')

@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">     
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <!-- <link rel="stylesheet" href="./css/nice-select.css">
-    <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.3">
     <link rel="stylesheet" href="css/responsive.css?v=1.0.3">
@@ -117,12 +117,770 @@
         </a>
     </div>
 </header>
-             
-            <ul class="breadcrumbs">
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
-                <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Каталог товаров</a></li>
-                <li class="breadcrumbs__item">Ортопедическая обувь</li>
-            </ul>
+
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Каталог товаров</a></li>
+                    <li class="breadcrumbs__item">Ортопедическая обувь</li>
+                </ul>
+
+                <h1 class="page-title">Ортопедическая обувь</h1>
+
+                <form class="filters">
+                    <div class="filter-group">
+                        <input class="filter filter_type1" type="radio" id="filter1" name="filter">
+                        <label for="filter1">
+                            <img src="img/filters/1.png" alt="">
+                            <span>Детская и подростковая</span>
+                            <i class="icon-font icon-tick"></i>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter2" name="filter">
+                        <label for="filter2">
+                            <img src="img/filters/2.png" alt="">
+                            <span>Взрослая</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter3" name="filter">
+                        <label for="filter3">
+                            <img src="img/filters/3.png" alt="">
+                            <span>Терапевтическая обувь</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter4" name="filter">
+                        <label for="filter4">
+                            <img src="img/filters/4.png" alt="">
+                            <span>Стабилизирующая обувь</span>
+                        </label>
+
+                        <input class="filter filter_type1" type="radio" id="filter5" name="filter">
+                        <label for="filter5">
+                            <img src="img/filters/5.png" alt="">
+                            <span>Домашняя обувь</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title">Взрослая обувь:</div>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter11" name="filter1">
+                        <label for="filter11">
+                            <span>Варусная</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter12" name="filter1">
+                        <label for="filter12">
+                            <span>Женская обувь</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter13" name="filter1">
+                        <label for="filter13">
+                            <span>Мужская обувь</span>
+                        </label>
+
+                        <input class="filter filter_type2" type="checkbox" id="filter14" name="filter1">
+                        <label for="filter14">
+                            <span>Мужская обувь (скрытая)</span>
+                        </label>
+
+                        <div class="filter-select">
+                            <label for="sort-select">Сортировать по:</label>
+                            <select name="" id="sort-select" class="sort-select">
+                                <option value="">новизне</option>
+                                <option value="">популярности</option>
+                                <option value="">цене (от высокой)</option>
+                                <option value="">цене (от низкой)</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="catalog">
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="product">
+    <div class="product__img">
+        <a href="#fast1" data-fancybox>
+            <img src="img/products/1.png" alt="">
+        </a>
+    </div>
+    <div class="product__desc">
+        <div class="product-art">Артикул: VEGA-220</div>
+        <div class="product-title"><a href="card.html">VEGA-220 Аппарат массажный с маркировкой «Vega»</a></div>
+    </div>
+    <div class="product__bottom">
+        <div class="product-price">117 ₽</div>
+        <form action="">
+            <button class="product-button"><i class="icon-font icon-cart2"></i></button>
+        </form>
+    </div>
+    <div class="fast-view" id="fast1">
+        <div class="card">
+            <div class="card-photo">
+                <img src="img/products/product-big.png" alt="">
+            </div>
+
+            <div class="card-info">
+                <h1 class="card-title">55-421М Обувь ортопедическая</h1>
+                <div class="card__row">
+                    <div class="product-presenсe">В наличии</div>
+                    <div class="product-art">Артикул: 55-421М</div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Размер:</div>
+                    <div class="product-sizes">
+                        <input type="radio" id="size1" value="25" class="product-size" name="size">
+                        <label for="size1">25</label>
+
+                        <input type="radio" id="size2" value="28" class="product-size"  name="size">
+                        <label for="size2">28</label>
+
+                        <input type="radio" id="size3" value="29" class="product-size"  name="size">
+                        <label for="size3">29</label>
+
+                        <input type="radio" id="size4" value="32" class="product-size"  name="size">
+                        <label for="size4">32</label>
+                    </div>
+                </div>
+                <div class="card__row">
+                    <div class="card__row-title">Количество:</div>
+                    <div class="product-count">
+                        <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                        <input type="text" value="1">
+                        <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                    </div>  
+                </div>
+                <div class="card__row">
+                    <div class="product-price">3 135 ₽</div>
+
+                    <form action="">
+                        <button class="product-button"><i class="icon-font icon-cart2"></i>Добавить в корзину</button>
+                    </form>
+                </div>
+                <div class="product-desc">
+                    <h3>Описание товара</h3>
+                    <p>Возрастная группа: Детская Пол: Для мальчиков Цвет: серый/синий Материал верха: натуральная кожа Материал подкладки: натуральная кожа Материал подошвы: ТЭП Сезон: Лето Вид обуви: Сандалеты Назначение: Профилактическая обувь Полнота: M Детская летняя профилактическая ортопедическая обувь тм Sursil-Ortho с открытым мысом. Модели с уплотненными задниками и жесткими умеренными берцами определенной формы из специального термопласта; Обувь легко надевается и регулируется в подъеме.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+
+                <a class="btn btn_transparent" href=""><i class="icon-font icon-catalog"></i>Показать еще</a>
+            </div>
         </div>
 
          <footer class="footer">
@@ -202,15 +960,15 @@
     </div>
 </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
 <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
 <!-- <script src="./js/map.js"></script> -->
-<script src="./js/slick.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
-<!-- <script src="./js/jquery.nice-select.min.js"></script> -->
+<script src="js/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
 <!-- <script src="./js/jquery-ui.min.js"></script> -->
 <!-- <script src="./js/cleave.min.js"></script> -->
-<!-- <script src="./js/sticky.min.js"></script> -->
-<script src="./js/script.js"></script>
+<script src="./js/sticky.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

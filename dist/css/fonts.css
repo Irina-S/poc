@@ -179,6 +179,12 @@
 
 /* '' */
 
+.icon-tick2:before {
+  content: '\e810';
+}
+
+/* '' */
+
 .icon-arrow-go-forward:before {
   content: '\e900';
 }

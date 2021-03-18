@@ -171,4 +171,13 @@ $(document).ready(function () {
     $('.search-block').removeClass('opened');
   });
 
+  $('#sort-select').niceSelect();
+
+  const stickyPhoto = new Sticky('.card-photo', {
+    stickyFor:992,
+    marginTop:70
+  });
+
+  $('[data-fancybox]').fancybox();
+
 });
