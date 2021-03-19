@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+@@include('_head.html')
+<body>
+    @@include('_aside.html')
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            @@include('_header.html')
+
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item">Корзина</li>
+                </ul>
+
+                <h1 class="page-title">Корзина</h1>
+
+                <div class="cart">
+                    <table class="cart-table">
+                        <tr>
+                            <td>
+                                <img src="img/products/3.png" alt="">
+                                <div>
+                                    <span class="product-art">Артикул: VEGA-220</span>
+                                    <strong class="product-title">55-421М Обувь ортопедическая</strong>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Колличество:</div>
+                                <div class="product-count">
+                                    <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                                    <input type="text" value="1">
+                                    <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Цена:</div>
+                                <div class="product-price">3 135 ₽</div>
+                                <span class="hint">Цена за 1 шт. 3 135 ₽</span>
+                            </td>
+                            <td>
+                                <a href=""><i class="icon-font icon-trash"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img src="img/products/3.png" alt="">
+                                <div>
+                                    <span class="product-art">Артикул: VEGA-220</span>
+                                    <strong class="product-title">55-421М Обувь ортопедическая</strong>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Колличество:</div>
+                                
+                                <div class="product-count">
+                                    <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                                    <input type="text" value="1">
+                                    <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Цена:</div>
+                                <div class="product-price">3 135 ₽</div>
+                                <span class="hint">Цена за 1 шт. 3 135 ₽</span>
+                            </td>
+                            <td>
+                                <a href=""><i class="icon-font icon-trash"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img src="img/products/3.png" alt="">
+                                <div>
+                                    <span class="product-art">Артикул: VEGA-220</span>
+                                    <strong class="product-title">55-421М Обувь ортопедическая</strong>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Колличество:</div>
+
+                                <div class="product-count">
+                                    <button class="dec"><img src="img/icons/minus.svg" alt="-"></button>
+                                    <input type="text" value="1">
+                                    <button class="inc"><img src="img/icons/plus.svg" alt="+"></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="title">Цена:</div>
+                                <div class="product-price">3 135 ₽</div>
+                                <span class="hint">Цена за 1 шт. 3 135 ₽</span>
+                            </td>
+                            <td>
+                                <a href=""><i class="icon-font icon-trash"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="cart-sum">
+                        <div class="cart-sum__title">В корзине 4 товара</div>
+                        <div class="cart-sum__total"><span>Итого: </span><span>23 135 ₽</span></div>
+                        <div class="cart-sum__promo">
+                            <label for="promo">Промокод (необязательно):</label>
+                            <input type="text" id="promo" name="promo">
+                            <button class="btn btn_transparent">Применить</button>
+                        </div>
+                        <a href="order.html" class="btn btn_filled">Оформить заказ</a>
+                        <span>Оформление заказа займет всего 1-2 минуты</span>
+                    </div>
+                </div>
+
+                <section class="similar-products">
+                    <h2 class="page-title">Смотрите также:</h2>
+
+                    <div class="catalog-slider">
+                        @@include('_product.html')
+
+                        @@include('_product.html')
+
+                        @@include('_product.html')
+
+                        @@include('_product.html')
+
+                        @@include('_product.html')
+
+                        @@include('_product.html')
+                    </div>
+                </section>
+            </div>
+        </div>
+
+         @@include('_footer.html')
+    </div>
+    @@include('_scripts.html')
+</body>
+</html>

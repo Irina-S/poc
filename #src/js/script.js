@@ -178,6 +178,26 @@ $(document).ready(function () {
     marginTop:70
   });
 
-  $('[data-fancybox]').fancybox();
+  $('[data-fancybox]').fancybox({
+      afterShow : function( instance, current ) {
+        console.info( instance );
+    //     $(".fast-view").niceScroll({
+    //       cursorwidth:12,
+    //       cursoropacitymin:0.4,
+    //       cursorcolor:'#6e8cb6',
+    //       cursorborder:'none',
+    //       cursorborderradius:4,
+    //       autohidemode:'leave'
+    // });
+
+        $(".fast-view").mCustomScrollbar({
+          axis:'y'
+        });
+      }
+  });
+
+  
+
+  
 
 });
