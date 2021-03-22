@@ -12,6 +12,8 @@
 
 <glyph glyph-name="tick2" unicode="&#xe810;" d="M995 778l164-163-697-697-390 389 163 163 227-226 533 534z" horiz-adv-x="1231" />
 
+<glyph glyph-name="arrow-left" unicode="&#xe815;" d="M239 413h761v-125h-761l336-336-89-88-486 486 486 486 89-88-336-335z" horiz-adv-x="1000" />
+
 <glyph glyph-name="arrow-go-forward" unicode="&#xe900;" d="M667 558h-209c-66 0-130-26-176-73-47-47-74-110-74-177 0-66 27-130 74-176 46-47 110-74 176-74h375v-83h-375c-88 0-173 35-235 98-63 62-98 147-98 235 0 89 35 174 98 236 62 63 147 98 235 98h209v166l250-208-250-208v166z" horiz-adv-x="1000" />
 
 <glyph glyph-name="arrow-right" unicode="&#xe901;" d="M0 350h500 786m0 0l-429 429m429-429l-429-429" horiz-adv-x="1429" />

@@ -19,6 +19,14 @@
   .catalog-slider .slick-prev {
     left: -10px;
   }
+
+  .about-page__nav {
+    margin-left: 40px;
+  }
+
+  .about-page__content {
+    width: calc(100% - 348px - 40px);
+  }
 }
 
 @media (max-width: 1800px) {
@@ -517,6 +525,29 @@
   .fast-view .card .product-button {
     padding: 0 20px;
   }
+
+  .about-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .about-page__nav {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  .about-page__content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 991px) {
@@ -837,6 +868,16 @@
   .fast-view .card-info {
     padding: 0 20px 30px;
   }
+
+  .about-page {
+    font-size: 16px;
+  }
+
+  .about-page .gallary__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 10px * 2);
+        flex-basis: calc(100% / 2 - 10px * 2);
+    padding-bottom: 31%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -987,5 +1028,16 @@
 @media (max-width: 360px) {
   .cart-table td {
     width: 100% !important;
+  }
+
+  .about-page .gallary {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-page .gallary__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-bottom: 62%;
   }
 }

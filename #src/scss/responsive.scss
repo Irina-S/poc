@@ -2,14 +2,6 @@
 @import "_values.scss";
 
 /*ДЛЯ СЕТКИ*/
-
-
-// @media (min-width:1199px){
-//     .container{
-      
-//     }
-// }
-
 @media (min-width:1500px){
     .container{
         max-width: 1480px;
@@ -19,9 +11,7 @@
 }
 
 
-
 /* ПРОЧЕЕ */
-
 @media (max-width:1850px){
     .catalog-slider{
         .slick-next{
@@ -30,6 +20,16 @@
 
         .slick-prev{
             left: -10px;
+        }
+    }
+
+    .about-page{
+        &__nav{
+            margin-left: 40px;
+        }
+
+        &__content{
+            width: calc(100% - 348px - 40px);
         }
     }
 }
@@ -553,6 +553,22 @@
             }
         }
     }
+
+    .about-page{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        &__nav{
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
+
+        &__content{
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width:991px){
@@ -912,7 +928,16 @@
         }
     }
 
-
+    .about-page{
+        font-size: 16px;
+        
+        .gallary{
+            &__item{
+                flex-basis: calc(100% / 2 - 10px * 2);
+                padding-bottom: 31%;
+            }
+        }
+    }
 }
 
 
@@ -1078,4 +1103,18 @@
             }
         }
     }
+
+    .about-page{
+        .gallary{
+            margin-left: 0;
+            margin-right: 0;
+
+            &__item{
+                flex-basis: 100%;
+                padding-bottom: 62%;
+            }
+        }
+    }
+
+
 }

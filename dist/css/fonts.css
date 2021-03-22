@@ -185,6 +185,12 @@
 
 /* '' */
 
+.icon-arrow-left:before {
+  content: '\e815';
+}
+
+/* '' */
+
 .icon-arrow-go-forward:before {
   content: '\e900';
 }

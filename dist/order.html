@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Протезно-ортопедический центр</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">     
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0.3">
+    <link rel="stylesheet" href="css/responsive.css?v=1.0.3">
+</head>
+
+</head>
+
+<body class="is-order">
+    <header class="order-header">
+        <div class="order-wrapper">
+            <div class="order-header__body">
+                <div class="logo">
+                <a href="/">
+                    <img src="img/logo.png" alt="Логотип">
+                </a>
+                </div>
+
+                <a href="" class="backward-link"><i class="icon-font icon-arrow-left"></i>Вернуться к корзине</a>
+            
+                <div class="order-header__phone-block">
+                    <a href="tel:+79143570703" class="phone">+7 (914) 357-07-03</a>
+                    <div class="shedule">9:00-18:00 — без выходных</div>  
+                </div>
+            </div>
+        </div>
+    </header>
+    
+      <div class="order-page">
+        <div class="order-wrapper">
+            <div class="order-page__body">
+                <main class="order-page-main">
+                    
+                    <h1 class="page-title">Оформление заказа</h1>
+                    
+                    <form method="post" action="" id="shopOrderForm" class="shopOrderForm">
+                        <ol class="order-steps">
+                
+                            <li class="order-step" id="order-step-1">
+                                <div class="step-title-block">
+                                    <h4 class="step-title">Контактные данные</h4>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-group col-6">
+                                        <label for="name">Введите имя <sup>*</sup></label>
+                                        <input class="name-field" type="text" name="fullname" id="name">
+                                        <span class="error-field">Это поле обязательное</span>
+                                    </div>
+                        
+                        
+                                    <div class="field-group col-6">
+                                        <label for="phone">Введите телефон <sup>*</sup></label>
+                                        <input class="phone-field" type="text" name="phone" id="phone">
+                                        <span class="error-field">Неверный формат номера</span>
+                                    </div>                                
+                                </div>
+                            </li>
+                
+                            <li class="order-step" id="order-step-2">
+                                <div class="step-title-block">
+                                    <h4 class="step-title">Где и как вы хотите получить заказ?</h4>
+                                    <span class="error-field">Выберите способ доставки</span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="delivery" class="required" name="shk_delivery" value="Доставка по адресу">
+                                        <label for="delivery">
+                                            <span>Доставка по адресу</span>
+                                            <span>Бесплатно от 1990 ₽</span>
+                                            <img src="img/order-icons/delivery.svg" alt="">
+                                        </label>
+                                    </div>
+                        
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="by-myself" class="required" name="shk_delivery" value="Самовывоз">
+                                        <label for="by-myself">
+                                            <span>Самовывоз</span>
+                                            <span>из нашего магазина</span>
+                                            <img src="img/order-icons/by-mslf.svg" alt="">
+                                        </label>
+                                    </div>                                    
+                                </div>
+                    
+                                <div class="delivery-tab radio-tab">
+                                    <span class="error-field" style="display: none;">Заполните адрес доставки</span>
+
+                                    <label>Введите адрес доставки <sup>*</sup></label>
+
+                                    <div class="row">
+                                        <div class="field-group col-12">
+                                            <label>Улица</label>
+                                            <input class="required-group" type="text" id="street" name="street">
+                                            
+                                        </div>
+                                        <div class="field-group col-3">
+                                            <label>Дом</label>
+                                            <input class="required-group" type="text" id="house" name="house">
+                                            
+                                        </div>
+                                        <div class="field-group col-3">
+                                            <label>Квартира</label>
+                                            <input class="required-group" type="text" id="flat" name="flat">
+                                            
+                                        </div>
+                                        <div class="field-group col-3">
+                                            <label>Подъезд</label>
+                                            <input class="required-group" type="text" id="entrance" name="entrance">      
+                                        </div>
+                                        <div class="field-group col-3">
+                                            <label>Этаж</label>
+                                            <input class="required-group" type="text" id="floor" name="floor">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="doorphone">
+                                        <input type="checkbox" id="doorphone" value="да" name="doorphone"><label for="doorphone">Домофон работает</label>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="field-group col-12">
+                                            <label>Комментарий</label>
+                                            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                                        </div>                                         
+                                    </div>
+                    
+                     
+                                </div>
+                    
+                                <div class="bymslf-tab radio-tab">
+                                    <div id="map"></div>
+                                </div>                
+                            </li>
+                
+                            <li class="order-step required-radio" id="order-step-3">
+                                <div class="step-title-block">
+                                    <h4 class="step-title">Как вам будет удобнее оплатить заказ?</h4>
+                                    <span class="error-field">Выберите способ оплаты</span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="pay-1" class="required pay-type" name="pay-type" value="Наличными курьеру">
+                                        <label for="pay-1" style="display: block;">
+                                            <span>Наличными курьеру</span>
+                                            <span>при доставке по адресу</span>
+                                            <img src="img/order-icons/cash.svg" alt="">
+                                        </label>
+                                    </div>
+                        
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="pay-2" class="required pay-type" name="pay-type" value="Картой курьеру">
+                                        <label for="pay-2" style="display: block;">
+                                            <span>Картой курьеру</span>
+                                            <span>Картами Visa, MasterCard, Мир</span>
+                                            <img src="img/order-icons/card.svg" alt="">
+                                        </label>
+                                    </div>
+                        
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="pay-3" class="required pay-type" name="pay-type" value="Картой на сайте">
+                                        <label for="pay-3">
+                                            <span>Картой на сайте</span>
+                                            <span>Картами Visa, MasterCard, Мир</span>
+                                            <img src="img/order-icons/card2.svg" alt="">
+                                        </label>
+                                    </div>
+                        
+                                    <div class="field-group col-6 radio-group">
+                                        <input type="radio" id="pay-4" class="required pay-type" name="pay-type" value="При самовывозе">
+                                        <label for="pay-4">
+                                            <span>При самовывозе</span>
+                                            <span>Оплата в магазине</span>
+                                            <img src="img/order-icons/pick.svg" alt="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </form>
+            
+                </main>
+        
+                <aside class="order-summary__outer">
+                    <div class="order-summary">
+                        <div class="order-summary__title"><span>Ваш заказ</span> <span>4 товара</span></div>
+                        
+                        <ul class="order-summary__list">
+            
+                            <li class="order-summary__item order-product-item">
+                                <div class="order-product-item__title">55-421М Обувь ортопедическая</div>
+                                <div class="order-product-item__count">1 шт.</div>
+                                <div class="order-product-item__price">
+                                    <span class="price">340 руб.</span>
+                                </div>
+                            </li>
+
+                            <li class="order-summary__item order-product-item">
+                                <div class="order-product-item__title">55-421М Обувь ортопедическая</div>
+                                <div class="order-product-item__count">1 шт.</div>
+                                <div class="order-product-item__price">
+                                    <span class="price">340 руб.</span>
+                                </div>
+                            </li>
+                        
+                            <li class="order-summary__item">
+                                <div class="order-summary__item-title">
+                                <i class="icon-font icon-delivery"></i>
+                                Доставка
+                                </div>
+                                <div class="order-summary__item-value">не выбранно</div>
+                            </li>
+            
+                        </ul>
+                        
+                
+                        <footer class="order-summary__footer">
+                            <div class="order-summary__sum"><span>Сумма заказа:</span><span>23 135 ₽</span></div>
+                            <button class="btn btn_filled order-summary__btn" id="cart_btn">Оформить заказ</button>
+                        </footer>
+                    </div>
+            
+                    <script>
+                        document.querySelector('#cart_btn').addEventListener('click', function(){
+                            document.cookie = 'ordermade=1'; 
+                            document.querySelector("#shopOrderForm").submit();
+                        });
+                        
+                        
+                        function canBeProcessed2(){
+                            if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
+                            document.querySelector('.order-summary .send-submit-btn').disabled = false;
+                            } else{
+                            document.querySelector('.order-summary .send-submit-btn').disabled = true;
+                            }
+                        }
+                        
+                        canBeProcessed2();
+                        
+                    </script>
+                    
+                    <script>
+                        document.querySelector('#cart_btn').addEventListener('click', function(){
+                            document.cookie = 'ordermade=1'; 
+                            document.querySelector("#shopOrderForm").submit();
+                        });
+                        
+                        function canBeProcessed2(){
+                            if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
+                            document.querySelector('.order-summary .send-submit-btn').disabled = false;
+                            } else{
+                            document.querySelector('.order-summary .send-submit-btn').disabled = true;
+                            }
+                        }
+                        
+                        canBeProcessed2();
+                        
+                    </script>  
+                </aside>
+            </div>       
+        </div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+<!-- <script src="./js/map.js"></script> -->
+<script src="js/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- <script src="js/jquery.nicescroll.min.js"></script> -->
+<!-- <script src="./js/cleave.min.js"></script> -->
+<script src="js/sticky.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
