@@ -1,4 +1,25 @@
+$(document).on('af_complete', function(event, response){
+  var form = response.form;
+  if (response.success) {
+    $.fancybox.close();
+    $.fancybox.open({src  : '#order-success',type : 'inline'});
+    };
+  });
+
 $(document).ready(function () {
+
+  const $window = $(window);
+  const $header = $('.header__bottom');
+
+  $window.scroll(function(){
+    if ($window.scrollTop() > 50) {
+      $header.addClass('fixed');
+      $('.wrapper').css('padding-top', '68px');
+    } else {
+      $header.removeClass('fixed');
+      $('.wrapper').css('padding-top', '0');
+    }
+  });
 
     $('#main-slider').slick({
       slidesToShow: 1,
@@ -178,6 +199,10 @@ $(document).ready(function () {
     marginTop:70
   });
 
+  const stickyHeader = new Sticky('.header__bottom', {
+    marginTop:1
+  });
+
   $('[data-fancybox]').fancybox({
       afterShow : function( instance, current ) {
         console.info( instance );
@@ -203,11 +228,11 @@ $(document).ready(function () {
         phoneVal = $('#phone').val();
     }
     var cleave = new Cleave('#phone', {
-    prefix: '+7',
-    delimiters: [" (", ")", " ", "-", "-"],
-    blocks: [2, 3, 0, 3, 2, 2],
-    uppercase: true,
-    noImmediatePrefix: true
+      prefix: '+7',
+      delimiters: [" (", ")", " ", "-", "-"],
+      blocks: [2, 3, 0, 3, 2, 2],
+      uppercase: true,
+      noImmediatePrefix: true
     });
     
     if(phoneVal !== ''){
@@ -215,6 +240,16 @@ $(document).ready(function () {
     }
 
   } catch(e){}
+
+  // ПСЕВДОПЛЭЙСХОЛДЕРЫ
+  $('.field-group input').change(function(){
+    if ($(this).val()!=='')
+      $(this).addClass('not-empty');
+  });
+
+  $('label.placeholder').click(function(){
+    $(this).siblings('input').focus();
+  });
 
   function isPhoneValid(val){
     const pattern = "^\\+7 \\(\\d{3}\\) \\d{3}-\\d{2}-\\d{2}$";
@@ -286,6 +321,13 @@ $(document).ready(function () {
     return hasDeliveryAddr;
   }
 
+  function isPickPointValid(){
+    if ($('select.pick-point').val()=='Не выбрано')
+      return false;
+    else 
+      return true;
+  }
+
   $('#order-step-2 .required-group').change(function () {
     if (!isAddrValid()){
         $('#order-step-2').removeClass('success');
@@ -297,30 +339,46 @@ $(document).ready(function () {
       }
   });
 
+  $('#order-step-2 select.pick-point').change(function(){
+    if (!isPickPointValid()){
+       $('#order-step-2').removeClass('success');
+    }
+    else{
+      $('#order-step-2').addClass('success');
+    }
+  });
+
 
   function isStep2Success(){
     $('#order-step-2').removeClass('success');
-    const delivType = $('input[name=shk_delivery]:checked').attr('id');
+
+    const delivType = $('#order-step-2 .radio-group input:checked').attr('id');
+
     if (delivType=='delivery'){
       $('.delivery-tab').addClass('checked');
       $('.bymslf-tab').removeClass('checked');
+      if (isAddrValid())
+        $('#order-step-2').addClass('success');
     }
     else if (delivType=='by-myself'){
       $('.delivery-tab').removeClass('checked');
       $('.bymslf-tab').addClass('checked');
-      $('#order-step-2').addClass('success');
+      if (isPickPointValid())
+        $('#order-step-2').addClass('success');
     }
     $('input[name=pay-type]:checked').prop('checked', false);
 
     setPayment();
   };
 
-  $('input[name=shk_delivery]').change(function () {
+  $('#order-step-2 .radio-group input').change(function () {
     isStep2Success();
     isStep3Success();
   });
 
   isStep2Success();
+
+  $('.pick-point').niceSelect();
 
   // ВАЛИДАЦИЯ ШАГ 3
 
@@ -342,9 +400,9 @@ $(document).ready(function () {
 
   function canBeProcessed(){
     if($('.order-step.success').length === $('.order-step').length){
-      $('.order-summary .send-submit-btn').get(0).disabled = false;
+      $('.order-summary .order-summary__btn').get(0).disabled = false;
     } else{
-      $('.order-summary .send-submit-btn').get(0).disabled = true;
+      $('.order-summary .order-summary__btn').get(0).disabled = true;
     }
   }
 
@@ -352,5 +410,4 @@ $(document).ready(function () {
     canBeProcessed();
   });
   
-
 });

@@ -126,6 +126,12 @@
   margin-left: 10px;
 }
 
+.btn[disabled] {
+  background: #FFB717 !important;
+  opacity: 0.7;
+  cursor: default;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -171,6 +177,7 @@ body.dark:before {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 14;
   min-height: 100vh;
   width: 330px;
   display: -webkit-box;
@@ -190,6 +197,7 @@ body.dark:before {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
 }
 
 .aside::-webkit-scrollbar {
@@ -300,6 +308,7 @@ body.dark:before {
 .header-mobile .logo {
   height: 60px;
   width: auto;
+  margin-top: 10px;
 }
 
 .header-mobile .logo img {
@@ -318,6 +327,7 @@ body.dark:before {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-top: 10px;
 }
 
 .header-mobile__phone-block .phone {
@@ -355,6 +365,19 @@ body.dark:before {
           align-items: center;
   border-top: 1px solid #ECECEC;
   position: relative;
+}
+
+.header__bottom.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 12;
+  background-color: #fff;
+  padding-left: 58px;
+  padding-right: 58px;
+  width: calc(100vw - 347px);
+  -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .header__contacts {
@@ -1503,6 +1526,58 @@ body.dark:before {
           align-items: center;
 }
 
+.modal {
+  display: none;
+  padding: 0;
+}
+
+.modal-success {
+  width: 450px;
+  height: 410px;
+  background: #4BB155;
+}
+
+.modal__inner {
+  width: 100%;
+  height: 100%;
+  padding: 40px 44px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal img {
+  margin-bottom: 25px;
+}
+
+.modal-title {
+  margin: 0;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 167%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.modal-subtitle {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 138%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 .addr-list {
   margin: 0;
   padding: 0;
@@ -1867,6 +1942,9 @@ body.dark:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 60px;
 }
 
@@ -2018,6 +2096,25 @@ body.dark:before {
   margin-left: 0;
   padding: 58px 40px 51px 50px;
   width: 50%;
+}
+
+.fast-view .card-photo img {
+  margin-bottom: 150px;
+}
+
+.fast-view .card-photo .btn {
+  width: 100%;
+}
+
+.fast-view .card-photo .btn i {
+  margin-right: 0;
+  margin-left: 18px;
+}
+
+.fast-view .card-photo .btn i::before {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .fast-view .card-info {
@@ -2998,6 +3095,7 @@ body.dark:before {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .field-group label {
@@ -3008,6 +3106,26 @@ body.dark:before {
   line-height: 157%;
   color: #878787;
   margin-bottom: 9px;
+}
+
+.field-group label.placeholder {
+  color: #171717;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 0px 3px;
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.field-group label.placeholder:hover {
+  cursor: text;
 }
 
 .field-group sup {
@@ -3035,6 +3153,15 @@ body.dark:before {
 
 .field-group input:hover {
   border: 1px solid #4FC2FB;
+}
+
+.field-group input:focus + label.placeholder,
+.field-group input.not-empty + label.placeholder {
+  top: 0;
+  left: 24px;
+  -webkit-transform: translateY(-50%) scale(0.8);
+      -ms-transform: translateY(-50%) scale(0.8);
+          transform: translateY(-50%) scale(0.8);
 }
 
 .field-group textarea {
@@ -3100,6 +3227,7 @@ body.dark:before {
 }
 
 .radio-group label {
+  height: 100%;
   background: #FFFFFF;
   border: 1px solid #CDCDCD;
   border-radius: 5px;
@@ -3260,6 +3388,14 @@ body.dark:before {
   transition: all .3s;
 }
 
+.radio-tab {
+  display: none;
+}
+
+.radio-tab.checked {
+  display: block;
+}
+
 .backward-link {
   margin-left: 157px;
   margin-right: auto;
@@ -3282,4 +3418,106 @@ body.dark:before {
 
 .backward-link i {
   margin-right: 11px;
+}
+
+#order-map {
+  width: 100%;
+  max-height: 400px;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.pick-point {
+  width: 100%;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 14px 20px;
+}
+
+.pick-point.open {
+  border: 1px solid #CDCDCD;
+  border-radius: 5px 5px 0 0;
+}
+
+.pick-point::after {
+  border-color: #878787;
+  right: 23px;
+}
+
+.pick-point:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: #CDCDCD;
+  top: 0;
+  right: 50px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.pick-point:hover {
+  border-color: #4FC2FB;
+}
+
+.pick-point:hover::after {
+  border-color: #4FC2FB;
+}
+
+.pick-point:hover::before {
+  background: #4FC2FB;
+}
+
+.pick-point .current {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  color: #878787;
+}
+
+.pick-point .list {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
+  top: 93%;
+  padding: 5px 20px;
+}
+
+.pick-point .list .option {
+  min-height: unset;
+  padding: 5px 0;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  color: #171717;
+}
+
+.pick-point .list .option:hover {
+  color: #4FC2FB;
+  background: #fff;
+}
+
+.pick-point .list .selected.focus {
+  background: #FFFFFF;
 }

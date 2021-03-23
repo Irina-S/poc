@@ -86,6 +86,12 @@
             margin-left: 10px;
         }
     }
+
+    &[disabled]{
+        background: $yellow !important;
+        opacity: 0.7;
+        cursor: default;
+    }
 }
 
 

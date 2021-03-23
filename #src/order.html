@@ -13,7 +13,7 @@
                 </a>
                 </div>
 
-                <a href="" class="backward-link"><i class="icon-font icon-arrow-left"></i>Вернуться к корзине</a>
+                <a href="cart.html" class="backward-link"><i class="icon-font icon-arrow-left"></i>Вернуться к корзине</a>
             
                 <div class="order-header__phone-block">
                     <a href="tel:+79143570703" class="phone">+7 (914) 357-07-03</a>
@@ -39,14 +39,14 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="field-group col-6">
+                                    <div class="field-group col-12 col-sm-6">
                                         <label for="name">Введите имя <sup>*</sup></label>
                                         <input class="name-field" type="text" name="fullname" id="name">
                                         <span class="error-field">Это поле обязательное</span>
                                     </div>
                         
                         
-                                    <div class="field-group col-6">
+                                    <div class="field-group col-12 col-sm-6">
                                         <label for="phone">Введите телефон <sup>*</sup></label>
                                         <input class="phone-field" type="text" name="phone" id="phone">
                                         <span class="error-field">Неверный формат номера</span>
@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="delivery" class="required" name="shk_delivery" value="Доставка по адресу">
                                         <label for="delivery">
                                             <span>Доставка по адресу</span>
@@ -70,7 +70,7 @@
                                         </label>
                                     </div>
                         
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="by-myself" class="required" name="shk_delivery" value="Самовывоз">
                                         <label for="by-myself">
                                             <span>Самовывоз</span>
@@ -81,33 +81,30 @@
                                 </div>
                     
                                 <div class="delivery-tab radio-tab">
-                                    <span class="error-field" style="display: none;">Заполните адрес доставки</span>
+                                    <span class="error-field">Заполните адрес доставки</span>
 
                                     <label>Введите адрес доставки <sup>*</sup></label>
 
                                     <div class="row">
                                         <div class="field-group col-12">
-                                            <label>Улица</label>
                                             <input class="required-group" type="text" id="street" name="street">
-                                            
+                                            <label class="placeholder">Улица</label>
                                         </div>
-                                        <div class="field-group col-3">
-                                            <label>Дом</label>
+                                        <div class="field-group col-12 col-sm-6 col-lg-3">
                                             <input class="required-group" type="text" id="house" name="house">
-                                            
+                                            <label class="placeholder">Дом</label>
                                         </div>
-                                        <div class="field-group col-3">
-                                            <label>Квартира</label>
+                                        <div class="field-group col-12 col-sm-6 col-lg-3">
                                             <input class="required-group" type="text" id="flat" name="flat">
-                                            
+                                            <label class="placeholder">Квартира</label>
                                         </div>
-                                        <div class="field-group col-3">
-                                            <label>Подъезд</label>
-                                            <input class="required-group" type="text" id="entrance" name="entrance">      
+                                        <div class="field-group col-12 col-sm-6 col-lg-3">
+                                            <input class="required-group" type="text" id="entrance" name="entrance">  
+                                            <label class="placeholder">Подъезд</label>    
                                         </div>
-                                        <div class="field-group col-3">
-                                            <label>Этаж</label>
+                                        <div class="field-group col-12 col-sm-6 col-lg-3">
                                             <input class="required-group" type="text" id="floor" name="floor">
+                                            <label class="placeholder">Этаж</label>
                                         </div>
                                     </div>
                                     
@@ -126,7 +123,20 @@
                                 </div>
                     
                                 <div class="bymslf-tab radio-tab">
-                                    <div id="map"></div>
+                                    <div id="order-map"></div>
+
+                                    <div class="row">
+                                        <div class="field-group col-12">
+                                            <label for="pick-point">Выберите магазин для самовывоза <sup>*</sup></label>
+                                            <select name="pick-point" id="pick-point" class="pick-point">
+                                                <option value="Не выбрано">Не выбрано</option>
+                                                <!-- !!! В data-addr-id вывести id ресурса !!! -->
+                                                <option value="Чита, ул. Бутина, 101" data-addr-id="addr-1">Чита, ул. Бутина, 101</option>
+                                                <option value="Чита, ул. Ленина, 25" data-addr-id="addr-2">Чита, ул. Ленина, 25</option>
+                                                <option value="Чита, ул. Коханского, 5" data-addr-id="addr-3">Чита, ул. Коханского, 5</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>                
                             </li>
                 
@@ -137,7 +147,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="pay-1" class="required pay-type" name="pay-type" value="Наличными курьеру">
                                         <label for="pay-1" style="display: block;">
                                             <span>Наличными курьеру</span>
@@ -146,7 +156,7 @@
                                         </label>
                                     </div>
                         
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="pay-2" class="required pay-type" name="pay-type" value="Картой курьеру">
                                         <label for="pay-2" style="display: block;">
                                             <span>Картой курьеру</span>
@@ -155,7 +165,7 @@
                                         </label>
                                     </div>
                         
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="pay-3" class="required pay-type" name="pay-type" value="Картой на сайте">
                                         <label for="pay-3">
                                             <span>Картой на сайте</span>
@@ -164,7 +174,7 @@
                                         </label>
                                     </div>
                         
-                                    <div class="field-group col-6 radio-group">
+                                    <div class="field-group col-12 col-lg-6 radio-group">
                                         <input type="radio" id="pay-4" class="required pay-type" name="pay-type" value="При самовывозе">
                                         <label for="pay-4">
                                             <span>При самовывозе</span>
@@ -219,17 +229,17 @@
                     </div>
             
                     <script>
-                        document.querySelector('#cart_btn').addEventListener('click', function(){
-                            document.cookie = 'ordermade=1'; 
-                            document.querySelector("#shopOrderForm").submit();
-                        });
+                        // document.querySelector('#cart_btn').addEventListener('click', function(){
+                        //     document.cookie = 'ordermade=1'; 
+                        //     document.querySelector("#shopOrderForm").submit();
+                        // });
                         
                         
                         function canBeProcessed2(){
                             if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
-                            document.querySelector('.order-summary .send-submit-btn').disabled = false;
+                                document.querySelector('.order-summary .order-summary__btn').disabled = false;
                             } else{
-                            document.querySelector('.order-summary .send-submit-btn').disabled = true;
+                                document.querySelector('.order-summary .order-summary__btn').disabled = true;
                             }
                         }
                         
@@ -237,23 +247,6 @@
                         
                     </script>
                     
-                    <script>
-                        document.querySelector('#cart_btn').addEventListener('click', function(){
-                            document.cookie = 'ordermade=1'; 
-                            document.querySelector("#shopOrderForm").submit();
-                        });
-                        
-                        function canBeProcessed2(){
-                            if(document.querySelectorAll('.order-step.success') && document.querySelectorAll('.order-step') && document.querySelectorAll('.order-step.success').length === document.querySelectorAll('.order-step').length){
-                            document.querySelector('.order-summary .send-submit-btn').disabled = false;
-                            } else{
-                            document.querySelector('.order-summary .send-submit-btn').disabled = true;
-                            }
-                        }
-                        
-                        canBeProcessed2();
-                        
-                    </script>  
                 </aside>
             </div>       
         </div>

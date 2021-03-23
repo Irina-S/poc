@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/nice-select.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
-    <!-- <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.3">
     <link rel="stylesheet" href="css/responsive.css?v=1.0.3">
@@ -24,7 +23,9 @@
 <body>
     <aside class="aside">
     <div class="logo">
-        <img src="img/logo.png" alt="лого">
+        <a href="/">
+            <img src="img/logo.png" alt="лого">
+        </a>
     </div>
     <ul class="cat-list">
         <li class="cat-list__item"><a href="catalog.html"><i class="icon-menu-1"></i>Ортопедическая обувь</a></li>
@@ -46,7 +47,9 @@
             <header class="header">
     <div class="header-mobile">
         <div class="logo">
-            <img src="img/logo.png" alt="лого">
+            <a href="/">
+                <img src="img/logo.png" alt="лого">
+            </a>
         </div>
 
         <div class="header-mobile__phone-block">
@@ -346,16 +349,23 @@
         </div>
     </div>
 </footer>
+         <div class="modal modal-success" id="order-success">
+    <div class="modal__inner">
+        <img src="img/modal-img.png" alt="">
+        <h3 class="modal-title">Заказ оформлен!</h3>
+        <span class="modal-subtitle">Наш специалист свяжется с Вами в ближайшее время</span>
+    </div>
+</div>
     </div>
     <script src="js/jquery.min.js"></script>
-<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
-<!-- <script src="./js/map.js"></script> -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="./js/map.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- <script src="js/jquery.nicescroll.min.js"></script> -->
-<!-- <script src="./js/cleave.min.js"></script> -->
+<script src="./js/cleave.min.js"></script>
 <script src="js/sticky.min.js"></script>
 <script src="js/script.js"></script>
 </body>

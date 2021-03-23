@@ -191,6 +191,12 @@
 
 /* '' */
 
+.icon-arrow-right-1:before {
+  content: '\e816';
+}
+
+/* '' */
+
 .icon-arrow-go-forward:before {
   content: '\e900';
 }

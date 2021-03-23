@@ -4,7 +4,7 @@
 
 /* ПРОЧЕЕ */
 
-@media (min-width: 1500px) {
+@media (min-width: 1499px) {
   .container {
     max-width: 1480px;
     margin: 0 auto 0 auto;
@@ -32,6 +32,11 @@
 @media (max-width: 1800px) {
   .header {
     padding: 0 25px;
+  }
+
+  .header__bottom.fixed {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .benefits-block {
@@ -251,6 +256,45 @@
     margin: 0;
     width: 100%;
   }
+
+  .is-order {
+    background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(57%, #fff), color-stop(57%, #F6F6F6), to(#F6F6F6));
+    background: -o-linear-gradient(left, #fff 0%, #fff 57%, #F6F6F6 57%, #F6F6F6 100%);
+    background: linear-gradient(90deg, #fff 0%, #fff 57%, #F6F6F6 57%, #F6F6F6 100%);
+  }
+
+  .order-wrapper {
+    max-width: 1140px;
+  }
+
+  .order-summary {
+    padding: 10px 25px 30px;
+  }
+
+  .order-summary__outer {
+    width: 430px;
+    margin-left: 60px;
+  }
+
+  .radio-group label {
+    padding: 25px 52px 25px 65px;
+  }
+
+  .radio-group label::before {
+    left: 15px;
+  }
+
+  .radio-group label::after {
+    left: 25px;
+  }
+
+  .radio-group label img {
+    right: 15px;
+  }
+
+  .backward-link {
+    margin-left: 50px;
+  }
 }
 
 @media (max-width: 1380px) {
@@ -343,6 +387,10 @@
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+  }
+
+  .header__bottom.fixed {
+    width: 100vw;
   }
 
   .header__contacts {
@@ -548,6 +596,36 @@
   .about-page__content {
     width: 100%;
   }
+
+  .order-wrapper {
+    max-width: 960px;
+  }
+
+  .is-order {
+    background: none;
+  }
+
+  .order-page__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .order-page-main {
+    width: 100%;
+  }
+
+  .order-summary__outer {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 991px) {
@@ -632,6 +710,23 @@
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .fast-view .card-photo img {
+    margin-bottom: 50px;
+  }
+
+  .fast-view .card-photo .btn {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .fast-view .card-photo .btn i {
+    margin-left: 8px;
+  }
+
+  .order-wrapper {
+    max-width: 540px;
   }
 }
 
@@ -800,6 +895,50 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+
+  .order-wrapper {
+    max-width: 100%;
+  }
+
+  .backward-link {
+    margin: 0 auto;
+    font-size: 0;
+  }
+
+  .backward-link i {
+    font-size: 18px;
+  }
+
+  .order-header {
+    text-align: right;
+  }
+
+  .order-header .logo {
+    width: 170px;
+    height: auto;
+  }
+
+  .order-header .phone {
+    font-size: 15px;
+  }
+
+  .order-header .shedule {
+    line-height: 150%;
+    font-size: 12px;
+  }
+
+  .order-header__body,
+  .order-page__body {
+    padding: 0px 20px;
+  }
+
+  .order-step {
+    padding-left: 0;
+  }
+
+  .step-title-block {
+    padding-left: 50px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -877,6 +1016,35 @@
     -ms-flex-preferred-size: calc(100% / 2 - 10px * 2);
         flex-basis: calc(100% / 2 - 10px * 2);
     padding-bottom: 31%;
+  }
+}
+
+@media (max-width: 500px) {
+  .order-header__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .order-header__phone-block {
+    text-align: center;
+  }
+
+  .order-header .backward-link {
+    font-size: 14px;
+    margin: 5px auto 15px;
+  }
+
+  .order-header .backward-link i {
+    font-size: inherit;
+    margin-right: 10px;
   }
 }
 
@@ -1022,6 +1190,37 @@
   .cart-sum a.btn.btn_filled {
     font-size: 14px;
     padding: 18px 27px;
+  }
+
+  .order-summary {
+    padding: 10px 18px 25px;
+  }
+
+  .order-summary__title,
+  .order-summary__sum {
+    font-size: 18px;
+  }
+
+  .order-summary__btn {
+    padding: 18px 30px !important;
+  }
+
+  .order-product-item__title {
+    font-size: 13px;
+  }
+
+  .order-product-item__count {
+    font-size: 13px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70px;
+            flex: 0 0 70px;
+  }
+
+  .order-product-item__price {
+    font-size: 13px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 75px;
+            flex: 0 0 75px;
   }
 }
 
