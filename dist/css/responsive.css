@@ -301,6 +301,32 @@
   .product {
     width: 33.3%;
   }
+
+  .search-result__row {
+    padding: 10px;
+  }
+
+  .search-result__row img {
+    max-width: 50px;
+  }
+
+  .search-result__row span:first-of-type {
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .search-result__row span:last-of-type {
+    margin-left: 8px;
+    font-size: 16px;
+    -ms-flex-preferred-size: 80px;
+        flex-basis: 80px;
+  }
+
+  .search-result__link {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -343,11 +369,15 @@
             transform: translateX(0);
   }
 
+  .aside__close-btn {
+    display: block;
+  }
+
   .catalog-btn {
     display: block;
   }
 
-  .main-nav-btn {
+  .nav-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -450,7 +480,7 @@
   .header__search {
     margin-right: 10px;
     margin-left: auto;
-    width: 40%;
+    width: 50%;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -467,6 +497,10 @@
     width: 100%;
     padding-bottom: 20px;
     border-bottom: 1px solid #ECECEC;
+  }
+
+  .nav__close-btn {
+    display: block;
   }
 
   .nav__link {
@@ -489,6 +523,10 @@
   .search-form button i {
     font-size: 22px;
     margin-right: 0;
+  }
+
+  .search-result {
+    width: calc(100% - 46px);
   }
 
   .main-slider .slick-slide {
@@ -625,6 +663,32 @@
   .order-summary__outer {
     width: 100%;
     margin-left: 0;
+  }
+
+  .contacts-block {
+    width: 100%;
+    position: static;
+    text-align: center;
+    padding: 30px 25px 30px;
+  }
+
+  .contacts-block__socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  #contacts-map {
+    height: 450px;
+    max-height: 450px;
+    margin-bottom: 30px;
   }
 }
 
@@ -787,13 +851,17 @@
   }
 
   .search-form__close-btn {
-    display: block;
+    display: block !important;
   }
 
   .search-open-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .search-result {
+    width: 100%;
   }
 
   .cart-block {

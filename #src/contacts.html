@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+@@include('_head.html')
+<body>
+    @@include('_aside.html')
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            @@include('_header.html')
+
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item">Контакты</li>
+                </ul>
+
+                <h1 class="page-title">Контакты</h1>
+
+                <div class="contacts-map">
+                    <div id="contacts-map"></div>
+
+                    <div class="contacts-block">
+                        <div class="contacts-block__phone-block">
+                            <a href="tel:+79143570703" class="phone">+7 (914) 357-07-03</a>
+                            <div class="shedule">9:00-18:00 — без выходных</div> 
+                        </div>
+
+                        <ul class="contacts-list">
+                            <li class="contacts-list__item" data-addr-id="addr-1" data-coords="52.04273757205561,113.508092"><i class="icon-font icon-geo"></i>Чита, ул. Бутина, 101</li>
+                            <li class="contacts-list__item" data-addr-id="addr-2" data-coords="52.026127572069846,113.51897949999996"><i class="icon-font icon-geo"></i>Чита, ул. Ленина, 25</li>
+                            <li class="contacts-list__item" data-addr-id="addr-3" data-coords="52.05615207206161,113.50511849999998"><i class="icon-font icon-geo"></i>Чита, ул. Коханского, 5</li>
+
+                        </ul>
+
+                        <a href="mailto:zabpoc@mail.ru" class="contacts-block__email">
+                            <i class="icon-font icon-mail"></i>
+                            zabpoc@mail.ru
+                        </a>
+
+                        <div class="contacts-block__socials">
+                            <span>Присоединяйтесь к нам:</span>
+                            <div class="socials">
+                                <a href="" class="socials__link"><i class="icon-font icon-fb"></i></a>
+                                <a href="" class="socials__link"><i class="icon-font icon-ig"></i></a>
+                                <a href="" class="socials__link"><i class="icon-font icon-vk"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+         @@include('_footer.html')
+         @@include('_modal.html')
+    </div>
+    @@include('_scripts.html')
+</body>
+</html>

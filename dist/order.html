@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">     
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.3">
@@ -150,9 +150,10 @@
                                             <select name="pick-point" id="pick-point" class="pick-point">
                                                 <option value="Не выбрано">Не выбрано</option>
                                                 <!-- !!! В data-addr-id вывести id ресурса !!! -->
-                                                <option value="Чита, ул. Бутина, 101" data-addr-id="addr-1">Чита, ул. Бутина, 101</option>
-                                                <option value="Чита, ул. Ленина, 25" data-addr-id="addr-2">Чита, ул. Ленина, 25</option>
-                                                <option value="Чита, ул. Коханского, 5" data-addr-id="addr-3">Чита, ул. Коханского, 5</option>
+                                                <!-- !!! В data-coords координаты точки !!! -->
+                                                <option value="Чита, ул. Бутина, 101" data-addr-id="addr-1" data-coords="52.04273757205561,113.508092">Чита, ул. Бутина, 101</option>
+                                                <option value="Чита, ул. Ленина, 25" data-addr-id="addr-2" data-coords="52.026127572069846,113.51897949999996">Чита, ул. Ленина, 25</option>
+                                                <option value="Чита, ул. Коханского, 5" data-addr-id="addr-3" data-coords="52.05615207206161,113.50511849999998">Чита, ул. Коханского, 5</option>
                                             </select>
                                         </div>
                                     </div>
@@ -272,13 +273,12 @@
       </div>
       <script src="js/jquery.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="./js/map.js"></script>
+<script src="js/map.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<!-- <script src="js/jquery.nicescroll.min.js"></script> -->
-<script src="./js/cleave.min.js"></script>
+<script src="js/cleave.min.js"></script>
 <script src="js/sticky.min.js"></script>
 <script src="js/script.js"></script>
 </body>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">     
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.3">
@@ -22,6 +22,7 @@
 
 <body>
     <aside class="aside">
+    <div class="aside__close-btn"></div>
     <div class="logo">
         <a href="/">
             <img src="img/logo.png" alt="лого">
@@ -58,6 +59,7 @@
         </div>
     </div>
     <div class="header__top">
+        <div class="nav__close-btn"></div>
         <nav class="nav">
             <a href="" class="nav__link">Главная</a>
             <a href="about.html" class="nav__link">Оплата</a>
@@ -86,7 +88,7 @@
         </div>
     </div>
     <div class="header__bottom">
-        <div class="main-nav-btn">
+        <div class="nav-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -103,8 +105,44 @@
             <form action="" class="search-form">
                 <input type="text" placeholder="Поиск по сайту...">
                 <button type="submit"><i class="icon-font icon-search"></i>Найти</button>
-                <button class="search-form__close-btn"></button>
+                <button type="button" class="search-form__close-btn"></button>
             </form>
+            <!-- Активный поиск -->
+            <div class="search-result search-hint">
+                <span>Популярные запросы:</span>
+                <a href="/">Ортопедическая обувь</a>
+                <a href="/">Корсет</a>
+                <a href="/">Детская обувь</a>
+            </div>
+            <!-- -------------- -->
+            <!-- Результаты поиска -->
+            <!-- <div class="search-result">
+                <a href="/" class="search-result__row">
+                    <img src="img/products/3.png" alt="">
+                    <span>55-421М Обувь ортопедическая</span>
+                    <span>3 135 ₽</span>
+                </a>
+
+                <a href="/" class="search-result__row">
+                    <img src="img/products/3.png" alt="">
+                    <span>55-421М Обувь ортопедическая</span>
+                    <span>3 135 ₽</span>
+                </a>
+
+                <a href="/" class="search-result__row">
+                    <img src="img/products/3.png" alt="">
+                    <span>55-421М Обувь ортопедическая</span>
+                    <span>3 135 ₽</span>
+                </a>
+                <a href="/" class="search-result__link">Перейти в раздел «Ортопедическая обувь»</a>
+            </div> -->
+            <!-- -------------- -->
+            <!-- Ничего не найдено -->
+            <!-- <div class="search-result search-failed">
+                <img src="img/search-failed.svg" alt="">
+                <span>По вашему запросу ничего <br> не найдено</span>
+            </div> -->
+            <!-- -------------- -->
         </div>
 
         <button class="search-open-btn"><i class="icon-font icon-search"></i></button>
@@ -798,13 +836,12 @@
     </div>
     <script src="js/jquery.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="./js/map.js"></script>
+<script src="js/map.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/jquery.nice-select.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<!-- <script src="js/jquery.nicescroll.min.js"></script> -->
-<script src="./js/cleave.min.js"></script>
+<script src="js/cleave.min.js"></script>
 <script src="js/sticky.min.js"></script>
 <script src="js/script.js"></script>
 </body>

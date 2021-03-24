@@ -140,7 +140,7 @@ $(document).ready(function () {
   const mobileMenu = $('.header__top');
 
   const mobileCatalogBtn = $('.catalog-btn');
-  const mobileMenuBtn = $('.main-nav-btn');
+  const mobileMenuBtn = $('.nav-btn');
 
   function clickDarkBodyHandler(event){
     const target = $(event.target);
@@ -172,14 +172,14 @@ $(document).ready(function () {
   });
 
   // КАТАЛОГ ЗАКРЫТИЕ
-  $('.aside .close-btn').click(function(){
+  $('.aside__close-btn').click(function(){
     $('.aside').removeClass('opened');
     $(document.body).removeClass('dark').removeClass('overflow-hid');
   });
 
   // НАВИГАЦИЯ ЗАКРЫТИЕ
-  $('.main-nav .close-btn').click(function(){
-    $('.main-nav').removeClass('opened');
+  $('.nav__close-btn').click(function(){
+    $('.header__top').removeClass('opened');
     $(document.body).removeClass('dark').removeClass('overflow-hid');
   });
 

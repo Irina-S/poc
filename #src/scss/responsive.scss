@@ -347,6 +347,37 @@
     .product{
         width: 33.3%;
     }
+
+    .search{
+        &-result{
+            &__row{
+                padding: 10px;
+
+                img{
+                    max-width: 50px;
+                }
+
+                 span{
+                    &:first-of-type{
+                        font-size: 12px;
+                        margin-left: 8px;
+                    }
+
+                    &:last-of-type{
+                        margin-left: 8px;
+                        font-size: 16px;
+                        flex-basis: 80px;
+                    }
+                }
+            }
+
+            &__link{
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 @media (max-width:1300px){
@@ -385,13 +416,17 @@
         &.opened{
             transform: translateX(0);
         }
+
+        &__close-btn{
+            display: block;
+        }
     }
 
     .catalog-btn{
         display: block;
     }
 
-    .main-nav-btn{
+    .nav-btn{
         display: flex;
     }
 
@@ -472,7 +507,7 @@
         &__search{
             margin-right: 10px;
             margin-left: auto;
-            width: 40%;
+            width: 50%;
             flex-grow: 0;
         }
     }
@@ -483,6 +518,10 @@
         width: 100%;
         padding-bottom: 20px;
         border-bottom: 1px solid #ECECEC;
+
+        &__close-btn{
+            display: block;
+        }
 
         &__link{
             font-size:20px;
@@ -500,7 +539,8 @@
         button{
             padding: 5px;
             font-size: 0;
-            width: 46px;height: 46px;
+            width: 46px;
+            height: 46px;
 
             i{
                 font-size: 22px;
@@ -509,6 +549,9 @@
         }
     }
 
+    .search-result{
+        width: calc(100% - 46px);
+    }
 
     .main-slider{
 
@@ -653,6 +696,31 @@
                 margin-left: 0;
             }
         }
+    }
+
+    .contacts{
+        &-map{
+            
+        }
+
+        &-block{
+            width: 100%;
+            position: static;
+            text-align: center;
+            padding: 30px 25px 30px;
+
+            &__socials{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+    }
+
+    #contacts-map{
+        height: 450px;
+        max-height: 450px;
+        margin-bottom: 30px;
     }
     
     
@@ -839,14 +907,17 @@
             position: relative;
 
             &__close-btn{
-                display: block;
+                display: block !important;
 
             }
         }
 
-
         &-open-btn{
             display: flex;
+        }
+
+        &-result{
+            width: 100%;
         }
     }
 
