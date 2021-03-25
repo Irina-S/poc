@@ -873,7 +873,7 @@ body.dark:before {
 .catalog{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
 
@@ -1592,7 +1592,7 @@ body.dark:before {
         }
     }
 
-    &+label{
+    &+label, &_type1{
         position: relative;
         border: 1px solid #4fc2fb00;
         background: #FFFFFF;
@@ -1637,7 +1637,7 @@ body.dark:before {
         }
     }
 
-    &:checked+label{
+    &:checked+label, &_type1.active{
         &::before{
             border: 1.5px solid $blue;
             background: $blue;
@@ -1656,48 +1656,47 @@ body.dark:before {
     }
 
     &_type1{
+        display: block;
+        padding: 16px 27px 18px;
+        height: 150px;
+        width: 150px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content:  flex-start;
+        align-items: center;
+        position: relative;
 
-        &+label{
-            padding: 16px 27px 18px;
-            height: 150px;
-            width: 150px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content:  flex-start;
-            align-items: center;
-
-            &:not(:last-of-type){
-                margin-right: 15px;
-            }
+        &:not(:last-of-type){
+            margin-right: 15px;
+        }
 
 
-            &::before{
-                top: 10px;
-                left: 10px;
-            }
+        &::before{
+            top: 10px;
+            left: 10px;
+        }
 
-            &::after{
-                top: 18px;
-                left: 16px;
-            }
+        &::after{
+            top: 18px;
+            left: 16px;
+        }
 
-            img{
-                margin-bottom: 6px;
-                width: 83px;
-                height: 74px;
-                object-fit: contain;
-            }
+        img{
+            margin-bottom: 6px;
+            width: 83px;
+            height: 74px;
+            object-fit: contain;
+        }
 
-            span{
-                font-family: Nunito;
-                font-style: normal;
-                font-weight: 800;
-                font-size: 14px;
-                line-height: 129%;
-                text-align: center;
-                color: #171717;
-            }
+        span{
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 129%;
+            text-align: center;
+            color: #171717;
         }
     }
 
@@ -2025,7 +2024,14 @@ body.dark:before {
         border: 1px solid #ECECEC;
 
         tr{
-            border: 1px solid #ECECEC;
+            // border: 1px solid #ECECEC;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            &:not(:last-child){
+               border-bottom: 1px solid #ECECEC; 
+            }
         }
 
         td{

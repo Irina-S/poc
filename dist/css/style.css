@@ -22,6 +22,7 @@
 
 .product-presenсe::before,
 .filter + label::after,
+.filter_type1::after,
 .radio-group label::after,
 .doorphone label::after {
   -webkit-clip-path: polygon(45% 64%, 94% 0%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
@@ -1143,9 +1144,9 @@ body.dark:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 30px;
@@ -1969,7 +1970,8 @@ body.dark:before {
   color: #171717;
 }
 
-.filter + label {
+.filter + label,
+.filter_type1 {
   position: relative;
   border: 1px solid #4fc2fb00;
   background: #FFFFFF;
@@ -1981,17 +1983,20 @@ body.dark:before {
   transition: all .3s;
 }
 
-.filter + label:hover {
+.filter + label:hover,
+.filter_type1:hover {
   border: 1px solid #4FC2FB;
   cursor: pointer;
 }
 
-.filter + label:hover:before {
+.filter + label:hover:before,
+.filter_type1:hover:before {
   border: 1.5px solid #4FC2FB;
   background: #4FC2FB;
 }
 
-.filter + label::before {
+.filter + label::before,
+.filter_type1::before {
   content: "";
   position: absolute;
   width: 24px;
@@ -2004,7 +2009,8 @@ body.dark:before {
   transition: all .3s;
 }
 
-.filter + label::after {
+.filter + label::after,
+.filter_type1::after {
   content: '';
   font-size: 22px;
   color: #000;
@@ -2021,23 +2027,27 @@ body.dark:before {
   transition: all .3s;
 }
 
-.filter:checked + label::before {
+.filter:checked + label::before,
+.filter_type1.active::before {
   border: 1.5px solid #009BE8;
   background: #009BE8;
 }
 
-.filter:checked + label::after {
+.filter:checked + label::after,
+.filter_type1.active::after {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
 
-.filter:checked + label:hover::before {
+.filter:checked + label:hover::before,
+.filter_type1.active:hover::before {
   border: 1.5px solid #4FC2FB;
   background: #4FC2FB;
 }
 
-.filter_type1 + label {
+.filter_type1 {
+  display: block;
   padding: 16px 27px 18px;
   height: 150px;
   width: 150px;
@@ -2055,23 +2065,24 @@ body.dark:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-.filter_type1 + label:not(:last-of-type) {
+.filter_type1:not(:last-of-type) {
   margin-right: 15px;
 }
 
-.filter_type1 + label::before {
+.filter_type1::before {
   top: 10px;
   left: 10px;
 }
 
-.filter_type1 + label::after {
+.filter_type1::after {
   top: 18px;
   left: 16px;
 }
 
-.filter_type1 + label img {
+.filter_type1 img {
   margin-bottom: 6px;
   width: 83px;
   height: 74px;
@@ -2079,7 +2090,7 @@ body.dark:before {
      object-fit: contain;
 }
 
-.filter_type1 + label span {
+.filter_type1 span {
   font-family: Nunito;
   font-style: normal;
   font-weight: 800;
@@ -2432,7 +2443,19 @@ body.dark:before {
 }
 
 .cart-table tr {
-  border: 1px solid #ECECEC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.cart-table tr:not(:last-child) {
+  border-bottom: 1px solid #ECECEC;
 }
 
 .cart-table td {

@@ -2,14 +2,24 @@
 @import "_values.scss";
 
 /*ДЛЯ СЕТКИ*/
-@media (min-width:1499px){
-    .container{
-        max-width: 1480px;
-        // margin: 0 51px 0 auto; 
-        margin: 0 auto 0 auto;                 
-    }
 
+@media (min-width:1200px){
+    .container{
+        max-width: calc(100% - 60px);
+        width: calc(100% - 60px);     
+        margin:0 30px 0 30px; 
+        padding: 0;           
+    }
 }
+
+@media (min-width:1700px){
+    .container{
+        max-width: calc(100% - 108px);
+        width: calc(100% - 108px);     
+        margin:0 50px 0 58px;            
+    }
+}
+
 
 
 /* ПРОЧЕЕ */
