@@ -240,6 +240,10 @@ function clean(params){
     return del(path.clean);
 }
 
+gulp.task('img', function(){
+    images();
+})
+
 let build = gulp.series(clean, gulp.parallel(js_libs, js, css_libs, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
